@@ -146,7 +146,7 @@
                 },
                 {
                     "name": "WEBSITE_CONTENTSHARE",
-                    "value": "[variables('storageAccountName')]"
+                    "value": "[concat(variables('storageAccountName'), 'admin-api')]"
                 },
                 {
                     "name": "FUNCTIONS_WORKER_RUNTIME",
@@ -192,7 +192,7 @@
                 },
                 {
                     "name": "WEBSITE_CONTENTSHARE",
-                    "value": "[variables('storageAccountName')]"
+                    "value": "[concat(variables('storageAccountName'), 'client-api')]"
                 },
                 {
                     "name": "FUNCTIONS_WORKER_RUNTIME",
