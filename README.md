@@ -5,6 +5,7 @@ application for bot management.
 
 # TODO
 
+* Add architectural drawings
 * Implement "deploy to azure" button
 * Add automatic client version updates
 * Make sure that the admin api of the IoT Hub can only be accessed from the cloud. Might need to put it into some vNet or something
