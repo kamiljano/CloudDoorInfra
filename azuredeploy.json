@@ -74,7 +74,42 @@
         "kind": "StorageV2",
         "sku": {
           "name": "Standard_LRS"
-        }
+        },
+        "resources": [
+          {
+            "name": "default",
+            "type": "blobServices",
+            "apiVersion": "2018-07-01",
+            "dependsOn": [
+              "[variables('storageAccountId')]"
+            ],
+            "properties": {
+              "cors": {
+                "corsRules": [
+                  {
+                    "allowedOrigins": [
+                      "*"
+                    ],
+                    "allowedMethods": [
+                      "GET", "OPTIONS"
+                    ],
+                    "exposedHeaders": [
+                      "*"
+                    ],
+                    "allowedHeaders": [
+                      "*"
+                    ],
+                    "maxAgeInSeconds": 3600
+                  }
+                ]
+              },
+              "deleteRetentionPolicy": {
+                "enabled": true,
+                "days": 7
+                }
+              }
+          }
+        ]
       },
       {
         "apiVersion": "2015-05-01",
